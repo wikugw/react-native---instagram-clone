@@ -1,6 +1,7 @@
 import React from 'react'
 import { FlatList, View } from 'react-native'
 import Story from '../Story'
+import styles from './style'
 
 const data = [
   { name: 'wiku', imageUri: 'https://scontent-sin6-2.cdninstagram.com/v/t51.2885-15/e35/70752876_393608954919754_127137273572647846_n.jpg?_nc_ht=scontent-sin6-2.cdninstagram.com&_nc_cat=110&_nc_ohc=pFwR_OqdmpQAX-BZGZ0&_nc_tp=18&oh=91741ba81c97de5c9a141973340f9a12&oe=5FAAA21B' },
@@ -15,9 +16,10 @@ const data = [
 
 function Stories() {
   return (
-    <View>
+    <View style={styles.container}>
       <FlatList
         horizontal
+        showsHorizontalScrollIndicator={false}
         keyExtractor={({ name }) => name}
         data={data}
         renderItem={({ item }) => (<Story name={item.name} imageUri={item.imageUri} />)} />
