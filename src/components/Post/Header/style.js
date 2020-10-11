@@ -3,7 +3,16 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    paddingHorizontal: 10
+    marginLeft: 5,
+    marginRight: 15,
+    justifyContent: 'space-between'
+  },
+  left: {
+    flexDirection: "row",
+  },
+  right: {
+    alignItems: 'flex-end',
+    justifyContent: 'center'
   },
   text: {
     alignSelf: "center",
