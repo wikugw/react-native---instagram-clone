@@ -33,6 +33,7 @@ const HomeStackScreen = () => (
         )
       }}
     />
+
   </HomeStack.Navigator>
 )
 
